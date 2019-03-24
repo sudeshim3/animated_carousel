@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 import 'first_page.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.white
+  ));
+
+  /*SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    systemNavigationBarColor: Colors.blue,
+    statusBarColor: Colors.pink,
+  ));*/
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
